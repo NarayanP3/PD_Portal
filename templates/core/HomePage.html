@@ -1,0 +1,524 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{% static 'core/css/HomePage.css' %}" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <!-- Include intl-tel-input CSS and JS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css">
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput-jquery.min.js"></script> -->
+  <title>Horizontal Accordion</title>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="alcherLogo">
+      <img src="{% static 'core/assets/Group 105.png'%}" alt="PD Image">
+      <!-- <h3 class="AlcheringaText"></h3> -->
+    </div>
+    <div class="navlinks">
+      <a href="#AboutUs" class="navterms" >About us</a>
+      <a href="#Highlights" class="navterms" >Highlights</a>
+      <a href="#Prizes"  class="navterms" >Prizes</a>
+      <a href="#Adjudicators" class="navterms" >Adjudicators</a>
+      <a href="#Team"  class="navterms" >Team</a>
+      <a href="#Contact" class="navterms" >Contact us</a>
+      <button class="registerButton" onclick="reg()"><a style="text-decoration: none; color:#030A06; cursor:pointer;">
+          Register</a></button>
+    </div>
+    <div class="mobile-menu-icon" onclick="toggleMobileMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <div class="navlinks2">
+      <a href="#AboutUs" style="text-decoration: none; color:#C2C2CC;" onclick="toggleMobileMenu()">About us</a>
+      <a href="#Highlights" style="text-decoration: none; color:#C2C2CC;" onclick="toggleMobileMenu()">Highlights</a>
+      <a href="#Prizes" style="text-decoration: none; color:#C2C2CC;" onclick="toggleMobileMenu()">Prizes</a>
+      <a href="#Team" style="text-decoration: none; color:#C2C2CC;" onclick="toggleMobileMenu()">Team</a>
+      <a href="#Contact" style="text-decoration: none; color:#C2C2CC;" onclick="toggleMobileMenu()">Contact us</a>
+    </div>
+  </nav>
+
+  <div class="intro">
+    <div class="introcontent">
+    <h3 class="Alcheringa24">ALCHERINGA</h3>
+    <div class = "MainHeading">
+      <img src="{% static 'core/assets/Group 105.png'%}" alt="PD Image">
+    <h1 class="PD">PARLIAMENTARY<br>
+      DEBATE</h1>
+      </div>
+    <p class="PDintro">Alcheringa, IIT Guwahati in its 26th incarnation presents to<br>
+      you another edition of its very own debate tournament, <br>
+      The IIT Guwahati Parliamentary Debate</p>
+    </div>
+  </div>
+
+
+
+  <div class="White_Borders" id="AboutUs">
+    <div class="White_Borders_content">
+      <div class="About_Head">
+        <h1> ABOUT </h1>
+      </div>
+      <div class="About_content">
+        <div class="About_content_content">
+          <p class="About_description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci nisl aliquet interdum habitasse
+            imperdiet. Velit nulla nisi, curabitur sagittis eu nec luctus nec morbi. Ullamcorper blandit
+            amet eget vitae. A vel fringilla senectus fermentum. Dictum proin habitasse vulputate egestas
+            feugiat ligula bibendum. Purus dolor, magna sit mollis mi lectus vel elementum lectus.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="Grey_Borders" id="Highlights">
+    <div class="Grey_Borders_content">
+      <div class="All_Contents_Head">
+        <h1> HIGHLIGHTS </h1>
+      </div>
+      <div class="Highlight_content">
+        <div class="content_content">
+          <img src="{% static 'core/assets/carbon_earth-southeast-asia-filled.png' %}" class="All_content_image">
+          <p class="heading"> ASIAN FORMAT </p>
+          <p class="description"> Debate will be held in 3v3 Asian Parliamentary Debate Format</p>
+        </div>
+        <div class="content_content">
+          <img src="{% static 'core/assets/n+1Rule.png'%}" class="All_content_image">
+          <p class="heading"> N+1 RULE </p>
+          <p class="description"> N+1 Rule will be strictly followed for adjudicator slots </p>
+        </div>
+        <div class="content_content">
+          <img src="{% static 'core/assets/prizes.png'%}" class="All_content_image">
+          <p class="heading"> ATTRACTIVE PRIZES </p>
+          <p class="description"> Prizes worth ₹1,30,000 to be won in total </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="White_Borders" id="Prizes">
+    <div class="White_Borders_content">
+      <div class="All_Contents_Head">
+        <h1> PRIZES </h1>
+      </div>
+      <div class="Prizes_content">
+        <div class="content_content">
+          <img src="{% static 'core/assets/BestSpeaker.png'%}" class="All_content_image">
+          <p class="heading"> BEST 3 SPEAKER AWARD </p>
+          <p class="description"> Worth ₹24,000 </p>
+        </div>
+        <div class="content_content">
+          <img src="{% static 'core/assets/Winner.png'%}" class="All_content_image">
+          <p class="heading"> WINNER </p>
+          <p class="description"> Worth ₹80,000 </p>
+        </div>
+        <div class="content_content">
+          <img src="{% static 'core/assets/BestAdjudicator.png'%}" class="All_content_image">
+          <p class="heading"> BEST 3 ADJUDICATOR AWARD </p>
+          <p class="description"> Prizes worth ₹1,30,000 to be <br> won in total </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="Grey_Borders" id="registrationFees">
+    <div class="Grey_Borders_content">
+      <div class="All_Contents_Head">
+        <h1> REGISTRATION FEES </h1>
+      </div>
+      <div class="Registration_Fees_content">
+        <div class="content_content">
+          <img src="{% static 'core/assets/Team.png'%}" class="All_content_image">
+          <p class="heading"> TEAM </p>
+          <p class="description"> ₹2400 <br> per team</p>
+        </div>
+        <div class="content_content">
+          <img src="{% static 'core/assets/Adjudicator.png'%}" class="All_content_image">
+          <p class="heading"> ADJUDICATOR </p>
+          <p class="description"> ₹800 <br> per person </p>
+        </div>
+        <div class="content_content">
+          <img src="{% static 'core/assets/Accommodation.png'%}" class="All_content_image">
+          <p class="heading"> ACCOMMODATION </p>
+          <p class="description"> ₹800 <br> per head for 4 days </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="White_Borders" id="Adjudicators">
+    <div class="White_Borders_content">
+      <div class="All_Contents_Head">
+        <h1> ADJUDICATORS </h1>
+      </div>
+      <div class="Adjudicators_content">
+        <div class="content_content">
+          <p class="Adjudicator_image"></p>
+          <p class="Adjudicator_name"> Placeholder </p>
+        </div>
+        <div class="content_content">
+          <p class="Adjudicator_image"></p>
+          <p class="Adjudicator_name"> Placeholder </p>
+        </div>
+        <div class="content_content">
+          <p class="Adjudicator_image"></p>
+          <p class="Adjudicator_name"> Placeholder </p>
+        </div>
+        <div class="content_content">
+          <p class="Adjudicator_image"></p>
+          <p class="Adjudicator_name"> Placeholder </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="Grey_Borders" id="Team">
+    <div class="Grey_Borders_content">
+      <div class="All_Contents_Head">
+        <h1> TEAM </h1>
+      </div>
+      <div class="Team_content">
+        <div class="content_content">
+          <p class="Team_image"></p>
+          <p class="heading"> Placeholder </p>
+          <p class="description"> Text </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer1">
+    <div class="end">
+      <div class="APD">
+        <div class="APD_content">
+          <p class="alcherLogoBottom"><img src="{% static 'core/assets/AlcherLogo.png'%}"></p>
+          <p class="alcherFooter">Alcheringa <br></p>
+          <p class="pDFooter"> PARLIAMENTARY DEBATE</p>
+        </div>
+      </div>
+
+      <div class="contactFollow" id="Contact">
+        <div class="contactFollowContent">
+          <div class="ContactFollow Contact">Contact us<br><br>
+            pd@alcheringa.in<br>
+            +91 365124892</div>
+
+          <div class="ContactFollow Follow">
+            <p class = "Follow_head">Follow Us</p>
+            <div>
+              <!-- <img src="{% static 'core/assets/alcherSocial.png'%}" class = "top"> -->
+              <div class = "logo">
+              <p class = "bottom"></p>
+              <p class = "bottom"></p>
+              <p class = "bottom"></p>
+              <p class = "bottom"></p></div>
+              <a href="https://www.instagram.com/alcheringaiitg/?hl=en"><img
+                  src="{% static 'core/assets/instagram.png'%}" class="top instagram"></a>
+              <a href="https://www.youtube.com/channel/UCQfsLKaY4a1Mx75hnaZDoxw"><img
+                  src="{% static 'core/assets/youtube.png'%}" class="top youtube"></a>
+              <a href="https://www.threads.net/@alcheringaiitg"><img src="{% static 'core/assets/at-sign.png'%}"
+                  class="top threads"></a>
+              <a href="https://www.facebook.com/alcheringaiitg/"><img src="{% static 'core/assets/facebook.png'%}"
+                  class="top facebook"></a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>COPYRIGHT © 2024 ALCHERINGA. ALL RIGHTS RESERVED<br>
+          Designed by Team Creatives. Developed by Team WebOps.</p>
+      </div>
+  </footer>
+
+
+  <!-- Institutional Team/Contingent-->
+  <div class="InstituteTeamCont">
+    <div class="header1">
+      <div class="left"> Register as</div>
+      <div class="right" onclick="cross()"> <a style="text-decoration: none; color:#FFFFFF; cursor: pointer;"> X </a>
+      </div>
+    </div>
+    <div class="header2">
+      <div class="leftp" onclick="reg()"><a style="text-decoration: none; color:rgb(242, 242, 120); cursor:pointer;">
+          Institutional Team/Contingent </a></div>
+      <div class="middle" onclick="reg2()"><a style="text-decoration: none; color:#FFFFFF; cursor: pointer;">
+          Cross/Open</a></div>
+      <div class="rightp" onclick="reg3()"> <a style="text-decoration: none; color:#FFFFFF; cursor:pointer;">
+          Independent Adjudicator </a></div>
+    </div>
+    <form action="{% url 'saveContact' %}" method="POST">
+      {% csrf_token %}
+      <div class="subheading">
+        Field marked <span class="redstarbig">* </span> are mandatory
+      </div>
+
+      <div class="institutionName inputs">
+        <input name="name_Institution" id="name" type="text" placeholder = "Name of Institution *" required>
+      </div>
+      <div class="noOfTeam  inputs">
+        <input name="team_Slots" id="name" type="number" placeholder = "Number of team slot(s) required *" required>
+      </div>
+      <div class="noOfAdjudicator  inputs">
+        <input name="adjudicator_Slots" id="name" type="number" placeholder = "Number of adjudicator slot(s) required *" required>
+      </div>
+      <div class="teamRep  inputs">
+        <input name="team_rep_name" id="name" type="text" placeholder = "Team(s) representative name *" required>
+      </div>
+      <div class="xyz">
+        <div class="option">
+          <select id="dropdown" name="country_code">
+              <option value="+91">+91</option>
+              <option value="+880">+880</option>
+          </select>
+        </div>
+        <!-- <script>
+                      // Optional: Add JavaScript to perform actions when an option is selected
+                      document.getElementById('dropdown').addEventListener('change', function() {
+                          // Get the selected value
+                          var selectedValue = this.value;
+                          console.log('Selected Option:', selectedValue);
+                      });
+                  </script> -->
+        <div class="contactNo inputs">
+          <input name="contact_number" class="phone" type="text" placeholder="Contact Number *" required>
+        </div>
+      </div>
+      <div class="email email-inputs">
+        <input type="text" id="multiline-placeholder" name="email_id_deb_soc" placeholder = "Email ID * &NewLine; (Preferably Debate Society of Institution)" required>
+      </div>
+      <div class="pocName  inputs">
+        <input name="alt_poc_name" id="name" type="text" placeholder = "Alternate point of contact (Name) *" required>
+      </div>
+      <div class="pocEmail email-inputs">
+        <input name="alt_poc_email_id" id="name" type="text" placeholder = "Alternate point of contact(Email ID) *" required>
+      </div>
+
+      <button> REGISTER </button>
+    </form>
+  </div>
+
+
+  <div class="CrossOpen">
+    <div class="header1">
+      <div class="left"> Register as</div>
+      <div class="right" onclick="cross()"> <a style="text-decoration: none; color:#FFFFFF; cursor: pointer;"> X </a>
+      </div>
+    </div>
+    <div class="header2">
+      <div class="leftp" onclick="reg()"><a style="text-decoration: none; color:#FFFFFF; cursor:pointer;"> Institutional
+          Team/Contingent </a></div>
+      <div class="middle" onclick="reg2()"><a style="text-decoration: none; color:rgb(242, 242, 120); cursor: pointer;">
+          Cross/Open</a></div>
+      <div class="rightp" onclick="reg3()"> <a style="text-decoration: none; color:#FFFFFF; cursor:pointer;">
+          Independent Adjudicator </a></div>
+    </div>
+    <form action="{% url 'saveContact2' %}" method="POST">
+      {% csrf_token %}
+      <div class="subheading">
+        Field marked <span class="redstarbig">* </span> are mandatory
+      </div>
+
+      <div class="teamName  inputs">
+        <input name="name_Team" id="name" type="text" placeholder = "Name of Team *" required>
+      </div>
+      <div class="teamLeaderName  inputs">
+        <input name="team_leader_name" id="name" type="text" placeholder = "Name of Team Leader *" required>
+      </div>
+      <div class="noOfAdjudicator  inputs">
+        <input name="adjudicator_Slots" id="name" type="number" placeholder = "Number of Adjudicator slot(s) required *" required>
+      </div>
+      <div class="xyz">
+        <div class="option">
+          <select id="dropdown" name="country_code">
+              <option value="+91">+91</option>
+              <option value="+880">+880</option>
+          </select>
+        </div>
+        <div class="contactNo inputs">
+          <input name="contact_number" class="phone" type="text" placeholder="Contact Number *" required>
+        </div>
+      </div>
+      <!-- <div class="contactNo inputs">
+        <select id="dropdown" name="country_code">
+          <option value="+91">+91</option>
+          <option value="+880">+880</option>
+        </select>
+        <input name="contact_number" class="phone" type="text" placeholder = "Contact Number *" required>
+      </div> -->
+      <div class="email email-inputs">
+        <input name="email_id_head" id="name" type="text" placeholder = "E-mail ID *" required>
+      </div>
+      <div class="pocName  inputs">
+        <input name="alt_poc_name" id="name" type="text" placeholder = "Alternate point of contact (Name) *" required>
+      </div>
+      <div class="xyz">
+        <div class="option">
+          <select id="dropdown" name="alt_country_code">
+              <option value="+91">+91</option>
+              <option value="+880">+880</option>
+          </select>
+        </div>
+        <div class="pocContact inputs">
+          <input name="alt_poc_number" class="phone" type="text" placeholder="Alternate point of contact (Contact) *" required>
+        </div>
+      </div>
+      <!-- <div class="pocContact inputs">
+        <select id="dropdown" name="alt_country_code">
+          <option value="+91">+91</option>
+          <option value="+880">+880</option>
+        </select>
+        <input name="alt_poc_number" class="phone" type="text" placeholder = "Alternate point of contact (Contact) *" required>
+      </div> -->
+      <div class="pocEmail email-inputs">
+        <input name="alt_poc_email_id" id="name" type="text" placeholder = "Alternate point of contact (Email ID)" required>
+      </div>
+
+      <button> REGISTER </button>
+    </form>
+  </div>
+
+  <div class="independentAdjudicator">
+    <div class="header1">
+      <div class="left"> Register as</div>
+      <div class="right" onclick="cross()"> <a style="text-decoration: none; color:#FFFFFF; cursor: pointer;"> X </a>
+      </div>
+    </div>
+    <div class="header2">
+      <div class="leftp" onclick="reg()"><a style="text-decoration: none; color:#FFFFFF; cursor:pointer;"> Institutional
+          Team/Contingent </a></div>
+      <div class="middle" onclick="reg2()"><a style="text-decoration: none; color:#FFFFFF; cursor: pointer;">
+          Cross/Open</a></div>
+      <div class="rightp" onclick="reg3()"> <a style="text-decoration: none; color:rgb(242, 242, 120); cursor:pointer;">
+          Independent Adjudicator </a></div>
+    </div>
+    <form action="{% url 'saveContact3' %}" method="POST">
+      {% csrf_token %}
+      <div class="subheading">
+        Field marked <span class="redstarbig">* </span> are mandatory
+      </div>
+
+      <div class="adjudicatorName  inputs">
+        <input name="name_adjud" id="name" type="text" placeholder = "Name *" required>
+      </div>
+      <div class="collegeName  inputs">
+        <input name="institution_name" id="name" type="text" placeholder = "Name of College/Institution *" required>
+      </div>
+      <div class="xyz">
+        <div class="option">
+          <select id="dropdown" name="country_code">
+              <option value="+91">+91</option>
+              <option value="+880">+880</option>
+          </select>
+        </div>
+        <div class="contactNo inputs">
+          <input name="contact_number" class="phone" type="text" placeholder="Contact Number *" required>
+        </div>
+      </div>
+      <!-- <div class="contactNo inputs">
+        <select id="dropdown" name="country_code">
+          <option value="+91">+91</option>
+          <option value="+880">+880</option>
+        </select>
+        <input name="contact_number" class="phone" type="text" placeholder = "Contact Number *" required>
+      </div> -->
+      <div class="email email-inputs">
+        <input name="email_id_head" id="name" type="text" placeholder = "Email ID *" required>
+      </div>
+      <div class="xyz">
+        <div class="option">
+          <select id="dropdown" name="alt_country_code">
+              <option value="+91">+91</option>
+              <option value="+880">+880</option>
+          </select>
+        </div>
+        <div class="altContact input">
+          <input name="alt_poc_number" class="phone" type="text" placeholder="Alternate Contact Number *" required>
+        </div>
+      </div>
+      <!-- <div class="altContact inputs">
+        <select id="dropdown" name="alt_country_code">
+          <option value="+91">+91</option>
+          <option value="+880">+880</option>
+        </select>
+        <input name="alt_poc_number" class="phone" type="text" placeholder = "Alternate Contact Number *" required>
+      </div> -->
+      <div class="altEmail email-inputs">
+        <input name="alt_poc_email_id" id="name" type="text" placeholder = "Alternate Email ID *" required>
+      </div>
+
+      <button> REGISTER </button>
+    </form>
+  </div>
+
+</body>
+<script>
+  function toggleMobileMenu() {
+    var navlinks = document.querySelector('.navlinks2');
+    if (navlinks.style.display === 'block') {
+      navlinks.style.display = 'none';
+    } else {
+      navlinks.style.display = 'block';
+    }
+
+    let navToggle = document.querySelector('.mobile-menu-icon')
+  let bars = document.querySelectorAll('.bar')
+  bars.forEach(bar => bar.classList.toggle('x'))
+  }
+
+  navToggle.addEventListener('click', toggleMobileMenu)
+
+  function reg() {
+    document.getElementsByClassName("InstituteTeamCont")[0].style.display = "block";
+    document.getElementsByClassName("CrossOpen")[0].style.display = "none";
+    document.getElementsByClassName("independentAdjudicator")[0].style.display = "none";
+  }
+  function reg2() {
+    document.getElementsByClassName("CrossOpen")[0].style.display = "block";
+    document.getElementsByClassName("InstituteTeamCont")[0].style.display = "none";
+    document.getElementsByClassName("independentAdjudicator")[0].style.display = "none";
+  }
+  function reg3() {
+    document.getElementsByClassName("CrossOpen")[0].style.display = "none";
+    document.getElementsByClassName("InstituteTeamCont")[0].style.display = "none";
+    document.getElementsByClassName("independentAdjudicator")[0].style.display = "block";
+  }
+  function cross() {
+    document.getElementsByClassName("InstituteTeamCont")[0].style.display = "none";
+    document.getElementsByClassName("CrossOpen")[0].style.display = "none";
+    document.getElementsByClassName("independentAdjudicator")[0].style.display = "none";
+  }
+  $(".phone").intlTelInput({
+    separateDialCode: true,
+    onlyCountries: ['IN', 'BD'], // Specify the country codes you want to include
+    initialCountry: 'IN', // Set the initial country code
+  });
+</script>
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput-jquery.min.js"></script> -->
+<!-- <script>
+    $(document).ready(function () {
+        // Assuming you have an input field with the class "phone"
+        var phoneInput = $('.phone');
+
+        // Initialize the intlTelInput library
+        phoneInput.intlTelInput();
+
+        // Add an event listener to update the hidden input field when the selected country changes
+        phoneInput.on('countrychange', function (e, countryData) {
+            // Update the hidden input field value
+            $('#country_code_input').val(countryData.dialCode);
+        });
+    });
+</script> -->
+
+
+</html>

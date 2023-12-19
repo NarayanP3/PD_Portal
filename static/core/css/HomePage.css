@@ -1,0 +1,994 @@
+@font-face {
+    font-family: 'Sansation';
+    src: url("../fonts/Sansation_Regular.ttf") format('truetype');
+}
+@font-face {
+    font-family: 'SansationLight';
+    src: url("../fonts/Sansation_Light.ttf") format('truetype');
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    gap: 31vw;
+    width:100%;
+    height:13vh;
+    background-color: #0D1716;
+    font-family:'SansationLight',sans-serif;
+    font-weight: 700;
+    font-size: 1vw;
+  }
+  
+  .alcherLogo{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    gap:1vw;
+    position: relative;
+    left: 7vw;
+  
+  }
+
+  .mobile-menu-icon{
+    display: none;
+    cursor: pointer; /* Add a pointer cursor to indicate it's clickable */
+    padding: 10px; /* Add some spacing for touch/clickability */
+}
+
+    .navlinks2, .navlinks2 a{
+        display:none;
+    }
+        
+/* Styling for the mobile menu icon bars when clicked (active state) */
+.mobile-menu-icon.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.mobile-menu-icon.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-icon.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+    
+    /* Styles for the dropdown menu */
+    .navlinks2 {
+        display: none; /* Initially hide the links */
+        background-color:  #03070A; /* Background color of the dropdown */
+        position: absolute;
+        top: 8.9vh; /* Adjust the distance from the mobile menu icon */
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        z-index: 1; /* Ensure the dropdown is on top */
+        padding-bottom:100%
+    }
+    
+    .navlinks2 a {
+        display: block;
+        text-align: right;
+        margin-right: 3vw;
+        text-decoration: none;
+        font-size: 5vh;
+        color: #FFFFFF; /* Text color for the links in the dropdown */
+        padding: 8px 16px;
+        line-height:150%
+    }
+
+.bar {
+    width: 25px;
+    height: 1px;
+    background-color: white;
+    margin: 3px 0;
+    border-radius: 3px;
+    transition: 0.4s;
+}
+  
+  .alcherLogo img{
+    height: 4vw;
+    width: 3vw;
+    filter: contrast(0.2);
+  }
+  
+  .navlinks{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    line-height: 100%;
+    font-weight: 700;
+    gap:2vw;
+    position: relative;
+    font-size: 1vw;
+    top:0.2vw;
+    padding: 1vw;
+    
+  }
+  .registerButton{
+    background-color:  #DAD55B;
+    width:6vw;
+    border: none;
+    border-radius: 17px;
+    position:relative;
+    top: 0.1vw;
+    font-family: 'Sansation',sans-serif;
+    line-height: 13.43px;
+    font-size: 1vw;
+    font-weight: 700;
+    min-width: 5vw;
+    
+  }
+  
+  .intro{
+    height:50vw;
+    width: 100%;
+    color: white;
+    position: relative;
+    top: 13vh;
+    background-color: #030A06;
+    display:flex;
+    gap: 0.01vw;
+    flex-direction: column;
+    align-items:start;
+    background-image:url("../assets/Group29.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  
+  }
+  
+  .Alcheringa24{
+    position: relative;
+    top: 3vw;
+    left: 12vw;
+    font-size: 2.2vw;
+    font-weight: 400;
+    font-family:'Sansation',sans-serif;
+  }
+  .MainHeading{
+    position: relative;
+    display: flex;
+  }
+  .MainHeading img{
+    left: 12vw;
+    top: 5vw;
+    position: relative;
+    height: 10vw;
+    width: 7vw;
+  }
+  .PD{
+    position: relative;
+    left:15vw;
+    font-weight: 700;
+    font-size: 4.3vw;
+    line-height: 5.5vw;
+    font-family:'Sansation',sans-serif;
+    top: 12px;
+  }
+  .PDintro{
+    position: relative;
+    left:12vw;
+    top:9px;
+    font-weight: 400;
+    font-family:'Sansation',sans-serif;
+    font-size: 1.6vw;
+  }
+
+.Grey_Borders, .White_Borders{
+    width: 100%; height: 100%;
+}
+
+.Grey_Borders{    background-color:  #0D1716;   }
+
+.Grey_Borders_content, .White_Borders_content{
+    padding: 2% 8% 13% 12%;
+}
+.White_Borders{    
+    background-color: #030A06; 
+    
+}
+
+.All_Contents_Head{
+    height: 6vw;
+    font-size: 2vw;
+    color: rgb(218, 213, 91, 0.95);
+    font-family: "Sansation", sans-serif;
+    font-weight: 800;
+    /* position: relative; */
+    margin-top: 10vh;
+}
+.About_Head{
+    height: 6vw;
+    font-size: 2vw;
+    color: rgb(218, 213, 91, 0.95);
+    font-family: "Sansation", sans-serif;
+    font-weight: 800;
+    /* position: relative; */
+    margin-top: 19vh;
+}
+.About_content{
+    color: #C5C5C5;
+}
+.About_content_content{
+    width: 60%;
+    text-align: left;
+}
+.About_description{
+    font-weight: 400;
+    font-size:1.4vw;
+    position: relative;
+    font-family: "SansationLight", sans-serif;
+    top: 2vw;
+    line-height: 140%;
+}
+
+.Highlight_content, .Prizes_content, .Registration_Fees_content, .Adjudicators_content, .Team_content{
+    display: flex;
+    position: relative;
+    justify-content:space-evenly;
+    align-items: flex-start;
+    color: #C5C5C5;
+    top: 4vh;
+}
+
+.Highlight_content, .Prizes_content, .Registration_Fees_content{    gap: 6%;    }
+
+.Adjudicators_content{    
+    gap: 4%;
+    top: 1vh;  
+}
+
+.All_content_image{
+    position: relative;
+    top: 1vw;
+    height: 7vw;
+    width: 7vw;
+    transition: transform o.3s ease-out;
+}
+
+.All_content_image:hover {
+    transform: scale(1.1);
+}
+
+.navterms{
+    transition: color 0.3s ease-in-out;
+    text-decoration: none; 
+    color:#C2C2CC;
+}
+
+.navterms:hover{
+    color: #DAD55B;
+}
+
+.heading{
+    font-weight: 400;
+    font-family: "Sansation", sans-serif;
+    font-size: 1.6vw;
+    position: relative;
+    top: 2vw;
+}
+.description{
+    font-weight: 300;
+    font-family: "SansationLight", sans-serif;
+    font-size:1.5vw;
+    position: relative;
+    /* line-height:0vh; */
+    top: 3vw;
+}
+
+.content_content{
+    width: 25%;
+    text-align:center;
+}
+
+.Adjudicator_image{
+    height: 7.5vw;
+    width: 7.5vw;
+    position: relative;
+    top: 8vh;
+    left: 5vw;
+    border-radius:50%;
+    background-color: #B2B2B2;
+}
+
+.Adjudicator_name{
+    font-size: 1.2vw; 
+    font-weight: 400;
+    position: relative;
+    top: 8vh;
+    font-family: "SansationLight", sans-serif;   
+}
+
+.Team_image{
+    height: 7.5vw;
+    width: 7.5vw;
+    position: relative;
+    top: 0vh;
+    left: 6vw;
+    border-radius:50%;
+    background-color: #B2B2B2;
+}
+
+.footer1{
+    background-color: #030A06;
+    /* padding: 0% 0% 23% 0%; */
+
+}
+
+.end{
+    width: 100%;
+    /* background-color:  #030A06; */
+}
+.APD{
+    padding: 2% 14% 0% 14%;
+    gap:0.5vw;
+    text-align: center;
+    display: flex;
+    position: relative; 
+    top: 4vh;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    color: #C5C5C5;
+  }
+.APD_content{
+    width: 40%;
+    text-align:center;
+    color: rgb(218, 213, 91);
+    font-family: 'Sansation', sans-serif;
+}
+.alcherLogoBottom{
+    position: relative;
+}
+.alcherLogoBottom img{
+    height: 13vw;
+    width: 12vw;
+}
+.alcherFooter{
+    font-size: 2vw;
+    position: relative;
+    top:-1vw;
+    font-weight:700;
+    letter-spacing: 0.1vw;
+}
+.pDFooter{
+    font-size: 1.33vw;
+    position: relative;
+    top: -2vw;
+    font-weight:400;
+    letter-spacing: 0.2vw;
+}
+
+.contactFollow{
+    padding: 0% 14% 0% 14%;
+    gap:1vw;
+    position: relative;
+    top: 8vh;
+    text-align: center;
+}
+.Contact{
+    position: relative;
+    top: -4.5vw;
+    border-right: 2px solid #7E8499;
+}
+.Follow{
+    position: relative;
+    top: -2vw;
+    left: -8vw;
+}
+
+.logo{position: relative; display:flex; justify-content: space-between;
+        gap: 2vw; left:1vw;}
+
+.logo .bottom{
+    height: 2.5vw;
+    width: 2.5vw;
+    position: relative;
+    border-radius:50%;
+    z-index:0;
+    background-color: #B2B2B2;
+}
+
+img.top{
+    position: relative;
+    height: 2vw;
+    width: 2vw;
+    top: -3.3vw;
+    z-index: 1;
+}
+img.instagram{left:-3.3vw;}
+img.youtube{left:-0.5vw;}
+img.threads{left:2.4vw;}
+img.facebook{left:5.4vw;}
+
+.Follow_head{
+    position:relative; left:1vw;
+}
+.contactFollowContent{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    gap: 20%;
+    align-items: flex-end;
+}
+.ContactFollow{
+    width: 25%;
+    text-align:center;
+    color: #C5C5C5;
+    font-size: 1.1vw;
+    font-family: 'SansationLight', sans-serif;
+}
+.copyright{
+    text-align : center;
+    color:rgb(126, 132, 153, 0.65);
+    /* position: relative; */
+    margin-top: 4vh;
+    font-family: 'SansationLight', sans-serif;
+    background-color: #030A06;
+    font-size: 1.2vw;
+    padding-bottom: 4%;
+}
+
+footer{
+    background-color: #030A06;
+}
+
+
+
+/*Institute-Team Contingent*/
+.InstituteTeamCont, .CrossOpen, .independentAdjudicator{
+    /* background-color: #0D1716; */
+    position: absolute;
+    margin-left: 15vw;
+    top: 18vh;
+    width: 70vw;
+    font-family: 'Sansation', sans-serif;
+    display: none;
+    z-index: 100;
+}
+.InstituteTeamCont, .CrossOpen{
+    height: 120vh;
+}
+.independentAdjudicator{
+    height: 100vh;
+}
+
+
+.header1{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    background-color: #030A06;
+    color: white;
+    position: relative;
+    padding-left:2.5vh ;
+    padding-right: 2.5vh;
+    padding-top: 1.5vw;
+    padding-bottom: 3vw;
+    font-size: 2.5vw;
+    width: 100%;
+}
+
+.header2{
+    justify-content:space-evenly ;
+    align-items: center;
+    display: flex;
+    background-color:#030A06;
+    color: white;
+    position: relative;
+   width: 100%;
+   padding-top: 1.5vw;
+   padding-bottom: 1.5vw;
+    font-size: 1.5vw;
+}
+
+.header2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    background-color: rgb(242, 242, 120);
+  }
+
+.InstituteTeamCont .header2::after {
+    left: 5vw;
+    width: 32%;
+  }
+
+form{
+    background-color: #152423;
+    position: relative;
+    padding-left: 2.5vh;
+    padding-top: 1.5vw;
+   width: 100%;
+   padding-bottom: 20vh;
+}
+
+.InstituteTeamCont .leftp{
+    color: rgb(242, 242, 120);
+}
+
+.subheading{
+    padding-top: 4vh;
+    padding-bottom: 2vh;
+    font-size: 2vw;
+    color: white;
+}
+.redstarbig{
+    color: red;
+}
+*{box-sizing: border-box;}
+
+input[type=text],input[type=number], .iti{
+    width: 100%;
+  padding-top: 15px;
+  padding-bottom: 5px;
+  margin-top: 3.2vh;
+  display: inline-block;
+  border: none;
+  background: #152423;
+  color: white;
+  outline: none;
+}
+
+
+::placeholder{
+    color:white;
+    font-size:1.3vw;
+}
+
+/* input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+} */
+
+input{  font-family: 'Sansation', sans-serif; color: white; font-size: 1.3vw;   }
+
+.inputs{position:relative;}
+.inputs input{position:relative;z-index:9;background:transparent;}
+input[required]:valid + label{display: none;}
+
+.email-inputs {position:relative;}
+.email-inputs input{position:relative;z-index:9;background:transparent;}
+input[required]:valid + label{display: none;}
+
+.inputs, .email-inputs{
+    border-bottom: 0.8px  solid;
+    width: 95%;
+    color: white;
+    font-weight: 400;
+}
+
+
+.InstituteTeamCont input[required]:invalid+label {
+    display: inline-block;
+  }
+  
+  .InstituteTeamCont  input[required]:valid+label {
+    display: none;
+  }
+
+  .InstituteTeamCont button{
+    background-color: rgb(218, 218, 95);
+    font-size: 2.1vh;
+    position: relative;
+    top: 6vw;
+    font-weight: 700;
+    padding-left: 1.3vh;
+    padding-right: 1.3vh;
+    padding-top: 0.6vh;
+    padding-bottom: 0.6vh;
+    border-radius: 999px;
+    border: none;
+    margin-top: 2.2vh;
+    font-family: 'Sansation', sans-serif;
+}
+
+
+/*Cross-Open*/
+
+.CrossOpen .header2::after {
+    left: 29.5vw;
+    width: 20%;
+  }
+
+.CrossOpen .middle{
+    color: rgb(242, 242, 120);
+}
+
+.CrossOpen input[required]:invalid+label {
+    display: inline-block;
+  }
+  
+  .CrossOpen   input[required]:valid+label {
+    display: none;
+  }
+
+  .CrossOpen button{
+    background-color: rgb(218, 218, 95);
+    font-size: 2.1vh;
+    position: relative;
+    top: 6vw;
+    font-weight: 700;
+    padding-left: 1.3vh;
+    padding-right: 1.3vh;
+    padding-top: 0.6vh;
+    padding-bottom: 0.6vh;
+    border-radius: 999px;
+    border: none;
+    margin-top: 2.2vh;
+    font-family: 'Sansation', sans-serif;
+}
+
+/* Independent Adjudicator */
+
+.independentAdjudicator .header2::after {
+    left: 45vw;
+    width: 31%;
+  }
+
+.independentAdjudicator .rightp{
+    color: rgb(242, 242, 120);
+}
+
+.independentAdjudicator input[required]:invalid+label {
+    display: inline-block;
+  }
+  
+  .independentAdjudicator input[required]:valid+label {
+    display: none;
+  }
+
+  .independentAdjudicator button{
+    background-color: rgb(218, 218, 95);
+    font-size: 2.1vh;
+    position: relative;
+    top: 6vw;
+    font-weight: 700;
+    padding-left: 1.3vh;
+    padding-right: 1.3vh;
+    padding-top: 0.6vh;
+    padding-bottom: 0.6vh;
+    border-radius: 999px;
+    border: none;
+    margin-top: 2.2vh;
+    font-family: 'Sansation', sans-serif;
+}
+
+.xyz{
+    display: flex;
+    border-bottom: 0.8px  solid white;
+    width: 95%;
+    /* color: white; */
+    font-weight: 400;
+}
+
+.option{
+    /* height: 2vh; */
+    
+    margin-top: 3vh;
+    display: inline;
+    border: none;
+    /* top: 5vh; */
+    /* padding-top: 4vh; */
+    /* background-color: green; */
+}
+
+#dropdown{
+    background-color: #07231e;
+    height: 5vh;
+    /* width: 4vw; */
+    border: none;
+    color: white;
+}
+
+.contactNo{
+    display: inline;
+    margin-left: 1vw;
+    border: none;
+} 
+
+.pocContact{
+    border: none;
+    margin-left: 1vw;
+}
+
+.altContact{
+    border: none;
+    margin-left: 1vw;
+}
+
+.option select {
+    background-color:  #07231e;
+    outline: none;
+}
+
+.option select option:checked {
+    background-color:  #152423;
+}
+
+@media (max-width: 425px) {
+    .navbar{
+    gap: 10vw;
+    width:100%;
+    height:11vh;
+    }
+    .alcherLogo{
+        left: 5vw;
+    }
+      
+      .alcherLogo img{
+        height: 9vw;
+        width: 6vw;
+        /* margin-left: 25vw; */
+      }
+
+      .MainHeading img{top: 14vw; height: 15vw; width:10vw;}
+      
+      .AlcheringaText{
+      font-size: 4vw;
+      font-weight: 400;
+      }
+      .navlinks a:not(.registerButton a){
+        display: none;
+      }
+
+      
+      .registerButton{
+        width:18vw;
+        position:relative;
+        top: 0.1vw;
+        font-size: 3.5vw; 
+        left: 14vw;
+      }
+
+    .mobile-menu-icon {
+        display: block; /* Display the mobile menu icon on mobile */
+        /* margin-right: 19vw; */
+    }
+
+    .intro{
+        top: 11vh;
+        height: 60vh;
+      }
+
+.introcontent{
+    margin-left: -4vw;
+}
+      
+.Alcheringa24{
+top: 4vh;
+left: 12vw;
+font-size: 4vw;
+}
+.PD{
+left:20%;
+top: 3vh;
+font-size: 7.4vw;
+line-height: 10vw;
+}
+
+.PDintro{
+    top:5vh;
+    font-size: 2.6vw;
+}
+
+.Grey_Borders_content, .White_Borders_content{
+    padding: 2% 8% 16% 7%;
+}
+
+.Highlight_content, .Prizes_content, .Registration_Fees_content, .Adjudicators_content, .Team_content{
+    align-items: center;
+    flex-direction: column;
+}
+
+.All_Contents_Head{
+    height: 6vw;
+    font-size: 3.5vw;
+    margin-top: 11vh;
+}
+.About_Head{
+    height: 6vw;
+    font-size: 3.5vw;
+    margin-top: 11vh;
+
+}
+
+/* .about{
+    margin-top: 50vw;
+
+} */
+
+.About_content_content{
+    width: 100%;
+    text-align: left;
+}
+.About_description{
+    font-size:3.8vw;
+    top: 5vh;
+}
+
+.All_content_image, .Adjudicator_image, .Team_image{
+    top: 4vw;
+    height: 22vw;
+    width: 22vw;
+}
+
+.heading{
+    font-size: 5.7vw;
+    top: 1.5vw;
+}
+.description{
+    font-size:4.7vw;
+    /* line-height: 2.5vh; */
+    top: 0vw;
+}
+
+.content_content{
+    width: 60%;
+    margin-top: 4vh;
+}
+
+.Adjudicator_name{
+    font-size: 4vw; 
+    top: 9vh; 
+}
+
+.Adjudicator_image, .Team_image{
+    left: 14vw;
+}
+
+.end{
+    width: 100%;
+    height: 55vh;
+    background-color:  #030A06;
+}
+.APD_content{
+    width: 100%;
+}
+.alcherLogoBottom img{
+    height: 16vw;
+    width: 15vw;
+}
+.alcherFooter{
+    font-size: 6vw;
+    position: relative;
+    top:-5vw;
+    font-weight:700;
+    letter-spacing: 0.3vw;
+}
+.pDFooter{
+    font-size: 4vw;
+    position: relative;
+    top: -8vw;
+    font-weight:400;
+    letter-spacing: 0.4vw;
+}
+
+.contactFollow{
+    padding: 0% 14% 4% 14%;
+    gap:1vw;
+    position: relative;
+    top: 8vh;
+    text-align: center;
+    background-color: #030A06;
+}
+.Contact{
+    top:-6vw;
+    border-right:none;
+}
+.Follow{
+    position: relative;
+    top: 1.5vw;
+    left: -8vw;
+}
+
+.InstituteTeamCont, .CrossOpen, .independentAdjudicator{
+    margin-left: 10vw;
+    width: 80vw;   
+}
+
+
+.logo .bottom{
+height: 5vw;
+width: 5vw;
+left:8vw;
+}
+
+img.top{
+height: 4vw;
+width: 4vw;
+top: -7.5vw;
+}
+img.instagram{left:6.1vw;}
+img.youtube{left:8.1vw;}
+img.threads{left:10.1vw;}
+img.facebook{left:12.1vw;}
+
+.contactFollowContent{    gap: 25%; }
+.ContactFollow{
+    width: 35%;
+    font-size: 3.3vw;
+}
+
+.Follow_head{left:8.5vw;}
+
+.copyright{
+    display:none;
+}
+
+.header1{
+    font-size: 3.9vw;
+}
+
+.header2{
+    font-size: 2vw;
+}
+
+form{
+    padding-bottom: 8vh;
+}
+
+.header2::after{height: 2px;}
+
+.InstituteTeamCont .header2::after {
+    left: 4vw;
+    width: 36%;
+}
+.CrossOpen .header2::after {
+    left: 35.5vw;
+    width: 17%;
+}
+.independentAdjudicator .header2::after {
+    left: 52vw;
+    width: 30%;
+}
+
+::placeholder{font-size:2vw;}
+
+.option{
+    margin-top: 1.7vh;
+}
+
+.altContact{
+    width: 100%;
+    margin-top: -1.5vh;
+}
+
+.inputs, .email-inputs {height:10vw;}
+.inputs input[type=text], input[type=number] {margin-top: 1.7vh;}
+.iti{margin-top:0.5vh;}
+.iti__flag-container {    font-size: 2vw;}
+.email-inputs input[type=text], input[type=number] {margin-top: 1.7vh;}
+}
+
+.x:nth-of-type(1) {
+transition: all 100ms ease-in-out;
+transform: rotate(45deg);
+transform-origin: top left;
+width: 12px;
+}
+
+.x:nth-of-type(2) {
+transition: all 100ms ease-in-out;
+transform-origin: center;
+width: 0;
+}
+
+.x:nth-of-type(3) {
+transition: all 100ms ease-in-out;
+transform: rotate(-45deg);
+transform-origin: bottom left;
+width: 12px;
+}
